@@ -1,0 +1,26 @@
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Ten San Pham</th>
+            <th>Price</th>
+            <th>anh</th>
+            <th>chuc nang</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products; index as i">
+       <th>{{i+1}}</th>
+       <td>{{product.name}}</td>
+       <td>{{product.price}}</td>
+       <td>
+        <img src={{product.img}} alt="">
+       </td>
+       <td>
+        <button (click)="removeItem(product.id)!">xoa</button>
+        <button>sua</button>
+    </td>
+        </tr>
+    </tbody>
+</table>
+<button routerLink="add">them</button>
